@@ -1,116 +1,214 @@
-# Hindsight-Powered Coding Practice Mentor
+# 🧠 HINDESIGHT – AI Coding Practice Mentor
 
-An AI-based coding mentor that analyzes your solutions **after** you submit them — spotting mistakes, explaining *why* they happened, and giving personalized, adaptive hints to help you improve faster than generic "correct/incorrect" feedback ever could.
-
-Most coding practice platforms tell you *if* you got it right. This project focuses on what happens *after* that: turning every solved (or failed) problem into a learning opportunity through structured hindsight analysis.
+HINDESIGHT is an AI-powered coding mentor that helps programmers learn from their mistakes instead of simply telling them whether their solution is correct or incorrect. The system analyzes submitted code, identifies recurring errors, and provides personalized feedback and adaptive hints to improve problem-solving skills.
 
 ---
 
-## Overview
+# 🚀 Features
 
-Traditional coding practice tools (LeetCode, HackerRank, etc.) give binary pass/fail feedback with limited insight into *why* a solution is inefficient or what patterns the learner keeps missing. **Hindsight-Powered Coding Practice Mentor** addresses this gap by:
+* 🤖 **AI Code Analysis**
 
-- Analyzing submitted solutions **post-hoc** for correctness, efficiency, and style
-- Detecting recurring mistake patterns across a learner's submission history
-- Generating **adaptive hints** — tailored to the specific gap in understanding, not generic tips
-- Offering personalized improvement suggestions based on each learner's problem-solving trajectory over time
+  * Reviews submitted code for correctness, efficiency, and coding practices.
 
----
+* 💡 **Adaptive Hint Generation**
 
-## Key Features
+  * Provides progressive hints based on the user's understanding instead of revealing the answer immediately.
 
-- **Post-Solution Feedback Engine** — Reviews code after submission (regardless of pass/fail) to surface logical errors, edge cases missed, and inefficient approaches.
-- **Adaptive Hint System** — Hints scale in specificity: starts with a nudge, escalates to a more direct pointer if the learner is still stuck, based on mistake history.
-- **Mistake Pattern Analysis** — Tracks recurring error types (e.g., off-by-one errors, incorrect time complexity, missed edge cases) across sessions to identify weak spots.
-- **Personalized Guidance** — Suggestions adapt based on the individual learner's skill level and past performance, rather than one-size-fits-all feedback.
+* 📊 **Mistake Pattern Tracking**
 
----
+  * Detects recurring mistakes such as logic errors, edge cases, and inefficient algorithms.
 
-## How It Works
+* 📈 **Personalized Learning**
 
-1. **Submit** a solution to a coding problem.
-2. **Analyze** — the mentor evaluates the code for correctness, complexity, and common failure patterns.
-3. **Reflect** — feedback is generated explaining *what* went wrong and *why*, not just *that* it's wrong.
-4. **Adapt** — future hints and problem recommendations are shaped by the learner's mistake history, closing knowledge gaps over time.
+  * Tracks previous submissions to provide customized feedback and recommendations.
+
+* 🧠 **Reflection-Based Learning**
+
+  * Encourages users to understand why mistakes happened and how to avoid them.
 
 ---
 
-## Tech Stack
+# 📌 Problem Statement
 
-> Update this section with your actual stack.
-
-- **Language:** Python
-- **AI/LLM:** [e.g., OpenAI API / Claude API / local LLM]
-- **Backend:** [e.g., FastAPI / Flask]
-- **Frontend:** [e.g., React]
-- **Database:** [e.g., PostgreSQL / MongoDB — for storing submission and mistake history]
+Most coding practice platforms only indicate whether a solution is correct or incorrect. They rarely explain the reasoning behind mistakes or identify patterns in a learner's problem-solving process. HINDESIGHT addresses this by offering AI-driven feedback that transforms every coding attempt into a learning opportunity.
 
 ---
 
-## Getting Started
+# 🎯 Objectives
 
-### Prerequisites
-
-- Python 3.x
-- [Add other dependencies — Node.js, database, API keys, etc.]
-
-### Installation
-
-```bash
-git clone https://github.com/<your-username>/hindsight-coding-mentor.git
-cd hindsight-coding-mentor
-pip install -r requirements.txt
-```
-
-### Usage
-
-```bash
-python main.py
-```
-
-> Update installation/usage steps to match your actual entry point and setup.
+* Improve programming skills through personalized AI feedback.
+* Identify repeated coding mistakes across multiple submissions.
+* Generate adaptive hints instead of direct solutions.
+* Encourage reflective learning and continuous improvement.
+* Build a smarter coding mentor using Large Language Models (LLMs).
 
 ---
 
-## Project Structure
+# 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+### AI & APIs
+
+* Groq API (LLM)
+* Hindsight API
+
+### Development Tools
+
+* Node.js
+* npm
+
+---
+
+# 📂 Project Structure
 
 ```
-hindsight-coding-mentor/
-├── src/
-│   ├── analyzer/          # post-solution code analysis logic
-│   ├── hints/               # adaptive hint generation
-│   ├── mistake_tracker/     # pattern detection across submission history
-│   └── mentor/                # personalized feedback orchestration
-├── data/                        # sample problems / test cases
-├── requirements.txt
+HINDESIGHT/
+│
+├── App.jsx                # Main React application
+├── index.html             # Entry point
+├── package.json           # Project dependencies
+├── vite.config.js         # Vite configuration
+├── eslint.config.js       # ESLint configuration
+├── package-lock.json
 └── README.md
 ```
 
-> Adjust to match your actual folder layout.
+---
+
+# ⚙️ Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/your-username/HINDESIGHT.git
+```
+
+## Navigate to Project Folder
+
+```bash
+cd HINDESIGHT
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Configure API Keys
+
+Open **App.jsx** and add your API keys:
+
+```javascript
+const GROQ_API_KEY = "YOUR_GROQ_API_KEY";
+const HS_API_KEY = "YOUR_HINDSIGHT_API_KEY";
+```
 
 ---
 
-## Roadmap
+# ▶️ Run the Project
 
-- [ ] Expand mistake taxonomy (currently covers logic, complexity, edge cases)
-- [ ] Add support for multiple programming languages
-- [ ] Visual dashboard for tracking improvement over time
-- [ ] Integration with popular coding platforms (LeetCode/Codeforces import)
+```bash
+npm run dev
+```
 
----
+Open your browser and visit:
 
-## Contributing
-
-Contributions are welcome. Please open an issue to discuss proposed changes before submitting a pull request.
-
----
-
-## License
-
-[MIT / Apache 2.0 / Other — choose and add a LICENSE file]
+```
+http://localhost:5173
+```
 
 ---
 
-## Acknowledgments
+# 🧩 How It Works
 
-Built as part of [course/project name], focused on exploring how AI can improve learning efficiency in coding education through reflective, adaptive feedback rather than simple correctness checking.
+1. User submits a coding solution.
+2. The AI analyzes the code.
+3. Mistakes and inefficient approaches are identified.
+4. Personalized hints are generated.
+5. Previous mistakes are stored to improve future feedback.
+6. Users continuously learn through reflection and adaptive guidance.
+
+---
+
+# 📸 Future Enhancements
+
+* User authentication
+* Dashboard for learning progress
+* Multi-language programming support
+* Difficulty-based question recommendations
+* Integration with LeetCode and Codeforces
+* Performance analytics
+* Code visualization and execution history
+
+---
+
+# 🌟 Advantages
+
+* Personalized coding guidance
+* Faster learning through targeted feedback
+* Tracks long-term improvement
+* Encourages conceptual understanding
+* Suitable for beginners and intermediate programmers
+
+---
+
+# 📚 Applications
+
+* Coding interview preparation
+* Competitive programming
+* Programming education
+* Online coding platforms
+* University learning environments
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👩‍💻 Author
+
+**Sudhanva C**
+
+Bachelor of Engineering (Artificial Intelligence & Machine Learning)
+
+---
+
+⭐ If you found this project useful, consider giving it a **Star** on GitHub.
